@@ -42,13 +42,55 @@ In particular, since our questions revolves around healthiness and caloric value
 
 ## Data Cleaning and Exploratory Data Analysis
 
+Before doing any analysis, we had to merge the two datasets. After which, we added a helper function to unpack the nutritional content (calories, proteins, etc) in the nutrition column, and push them into their own columns. We also added a 'is_healthy' column where it check for a tag of 'healthy'. This poses a weakness in which a contributer can post a healthy recipe but not add that tag, and vice versa. However, given that 'healthy' is in and of itself an arbitrary term, for the sake of this analysis, we will treat that as the metric for health.
 
+In addition, we substitued any rating of 0 with np.nan since ratings must be on a 1-5 scale. We averaged them and added them to a seperate column. Finally, we also added 'rating_miss' column where we check if rating is missing. This will come in handy later on.
 
+### Data Cleaning
 
+Let's plot a histogram of calories' counts:
 
 <iframe
-  src="assets/file-name.html"
+  src="assets/raw_calories.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+We can see that the majority lie in the 0-5000 calorie mark. However, some data is lying in the upper 40k range, which might have a negative impact on our analyses. Therefore, I set the limit to 2000 calories as this is the limit of what most reasonable recipes have in calories. I simply filtered out values with calories greater than 2000. A reason for why they might have large amounts of calories is that they might not be for one person, or the person posting could have either made a mistake or trolling. This can be seen especially in the 'minutes' column, where a contributer posted a recipe that would take millions of minutes.
+
+Therefore, I filtered out based on these 5 points:
+* calories < 2000
+* carb PVD <100
+* protein PVD <100
+* total_fat PVD <100
+* minutes < 180
+
+### Univariate
+
+<iframe
+  src="assets/univariate/calorie_dist_2000.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/univariate/minutes_dist_180.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/univariate/avg_rate.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+### Bivariate
+
+
+### 
