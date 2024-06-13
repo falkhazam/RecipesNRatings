@@ -265,3 +265,22 @@ For our baseline model, we simply passed in the values of sodium, sugar, and hea
 
   R^2: 0.017
   RMSE: 194.4
+
+  We can see that our R^2 value is not bad, but not the best. This might be due to the fact that sugar is a contributing factor to calorie count, however, sodium plays very little if any role in the calorie count. Healthiness also can play a factor, but it could be tha it was a pretty weak metric.
+
+  ### Final Model
+
+  For our final model, we passed in all the nutritional values (carbohydrates, protein, total fat, sugar, sodium) and healthiness into a Pipeline with a LinearRegression model. We then calculated the R^2 score and the RMSE.
+
+  <iframe
+  src="assets/7_final_model/final_model.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+R^2 = 0.9854
+RMSE = 25.86
+
+We can see that our R^2 value is very high, and our RMSE is very low. This is a good sign that our model is very accurate. This is likely due to the fact that all the nutritional values, especially our macronutrients (carbs, protein, fats), are very important in determining the calorie count of a food.
+
