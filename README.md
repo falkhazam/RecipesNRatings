@@ -104,12 +104,16 @@ We can see that the majority of ratings are 5 stars, a hint for a possible bias.
   frameborder="0"
 ></iframe>
 
+We can see that foods tend to be labelled healthy when they are lower in calories.
+
 <iframe
   src="assets/bivariate/carb_health.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+We can see that foods tend to be labelled healthy when they are lower in carbs, but not at the very bottom where no carbs are added.
 
 <iframe
   src="assets/bivariate/protein_health.html"
@@ -118,6 +122,9 @@ We can see that the majority of ratings are 5 stars, a hint for a possible bias.
   frameborder="0"
 ></iframe>
 
+
+We can see that foods tend to be labelled healthy when they are lower in proteins.
+
 <iframe
   src="assets/bivariate/fat_health.html"
   width="800"
@@ -125,12 +132,16 @@ We can see that the majority of ratings are 5 stars, a hint for a possible bias.
   frameborder="0"
 ></iframe>
 
+We can see that foods tend to be labelled healthy when they are lower in fats.
+
 <iframe
   src="assets/bivariate/avg_rat_health.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+We can see that rating depends very little on healthiness, though healthier items seem to be a bit more likely to be rated a 4 than a 5 compared to unhealthy items.
 
 ### Interesting Aggregates
 
@@ -141,4 +152,10 @@ We can see that the majority of ratings are 5 stars, a hint for a possible bias.
   frameborder="0"
 ></iframe>
 
+We decided to plot the mean, max, and min of calories against minutes. We can see that it calories varies greatly the higher the time (minutes) goes. this might be due to the fact that most foods are at the lower end, this means that single values can have a stringer influence at the higher range of time. Assuming there is no coorelation, this would mean that the variation would increase the less the count is.
+
 ## Assessment of Missingness
+
+### NMAR
+
+* 'desciption' is NMAR because contributers are likely to not offer a description if it is simple and self explanatory. For example, a recipe for a PB and J sandwich might not need a description due to its simplicity, popularity, and self explanatory. Therefore, they might choose to not include it. 
