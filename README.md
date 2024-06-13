@@ -250,4 +250,17 @@ We can see that our observed difference is very much skewed to the left. This is
 
 ## Framing a Prediction Problem
 
+We wanted to see if we could predict the calories of a food based on the nutritional content and healthiness. Therefore, we ran a linear regression model to see if we could predict the calories of a food based on the nutritional content. We already extracted all nutritional values from the nutrition string. We got calories, total fat, sugar, sodium, protein, saturated fat, and carbohydrates. We also added a column for healthiness. Since all (except healthiness) are numerical values. We can simply pass the numericals into a StandardScaler to scale them and healthiness to OneHotEncoder. We then passed them into a pipeline with a LinearRegression model. 
 
+### Baseline Model
+
+For our baseline model, we simply passed in the values of sodium, sugar, and healthiness into a Pipeline with a LinearRegression model. We then calculated the R^2 score and the RMSE.
+ 
+<iframe
+  src="assets/6_baseline_model/baseline_model.html"
+  width="800"
+  height="600"
+  frameborder="0"
+
+  R^2: 0.017
+  RMSE: 194.4
