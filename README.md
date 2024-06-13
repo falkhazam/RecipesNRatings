@@ -194,7 +194,7 @@ We can see the density does not vary that gretaly, however, let us runa  permuta
 
 From this permutation test, we can see that the observed difference is not really skewed in one direction. Taking a look at the p-value, we can see that it is 0.112, which is greater than 0.05. 
 
-* Conclusion: We fail to reject the null hypothesis since 0.112 > 0.05. Therefore, the missingness of ratings does not depend on the amount of minutes it takes to make a recipe.
+* Conclusion: We fail to reject the null hypothesis since 0.112 > 0.05. Therefore, the missingness of ratings is unlikely to depend on the amount of minutes it takes to make a recipe.
 
 
 #### Against Calories:
@@ -224,6 +224,30 @@ From this permutation test, we can see that the observed difference is not reall
 
 From this permutation test, we can see that the observed difference is skewed in one direction. Taking a look at the p-value, we can see that it is 0.000, which is less than 0.05.
 
-* Conclusion: We reject the null hypothesis since 0.000 < 0.05. Therefore, the missingness of ratings does depend on the amount of calories in a recipe.
+* Conclusion: We reject the null hypothesis since 0.000 < 0.05. Therefore, the missingness of ratings is likely dependant on the amount of calories in a recipe.
 
 ## Hypothesis Testing
+
+We wanted to see if calories had any impact on the healthiness of a food. Therefore, we ran a permutation test to see if there was a difference in mean calories between healthy and unhealthy foods. 
+
+* Null Hypothesis: Healthy foods have the same amount of calories as unhealthy food.
+
+* Alternative Hypothesis: Healthier foods have less calories than unhealthy food.
+
+* Test Statistic: The difference in mean between calorie count of heathy foods and unhealthy foods.
+
+* p-value: 0.000
+
+<iframe
+  src="assets/4_null/health_cal_perm.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+We can see that our observed difference is very much skewed to the left. This is further confirmed by the p-value of 0.000, which is less than 0.05. 
+
+* Conclusion: We reject the null hypothesis since 0.000 < 0.05. Therefore, healthier foods likely have less calories than unhealthy foods.
+
+## Framing a Prediction Problem
+
+
