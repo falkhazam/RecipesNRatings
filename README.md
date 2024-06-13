@@ -185,7 +185,7 @@ We wanted to examine the missingess of the rating column and check if it has any
 The values of minutes vary greatly, so we will plot the denisity of the filtered values.
 
 <iframe
-  src="assets/missingess/calories_pivot_min.html"
+  src="assets/missingness/calories_pivot_min.html"
   width="800"
   height="600"
   frameborder="0"
@@ -194,7 +194,7 @@ The values of minutes vary greatly, so we will plot the denisity of the filtered
 We can see the density does not vary that gretaly, however, let us runa  permutation test to be sure.
 
 <iframe
-  src="assets/missingess/perm_min.html
+  src="assets/missingness/perm_min.html
   width="800"
   height="600"
   frameborder="0"
