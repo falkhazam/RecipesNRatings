@@ -75,12 +75,16 @@ Therefore, I filtered out based on these 5 points:
   frameborder="0"
 ></iframe>
 
+We can see that the calories histogram is much cleaner.
+
 <iframe
   src="assets/univariate/minutes_dist_180.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+We can see that the minutes histogram is also much cleaner.
 
 <iframe
   src="assets/univariate/avg_rate.html"
@@ -89,8 +93,52 @@ Therefore, I filtered out based on these 5 points:
   frameborder="0"
 ></iframe>
 
+We can see that the majority of ratings are 5 stars, a hint for a possible bias.
 
 ### Bivariate
 
+<iframe
+  src="assets/bivariate/calories_health.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-### 
+<iframe
+  src="assets/bivariate/carb_health.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/bivariate/protein_health.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/bivariate/fat_health.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/bivariate/avg_rat_health.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+### Interesting Aggregates
+
+<iframe
+  src="assets/calories_pivot_min.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+## Assessment of Missingness
