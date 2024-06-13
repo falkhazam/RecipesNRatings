@@ -268,7 +268,7 @@ For our baseline model, we simply passed in the values of sodium, sugar, and hea
 
   We can see that our R^2 value is not bad, but not the best. This might be due to the fact that sugar is a contributing factor to calorie count, however, sodium plays very little if any role in the calorie count. Healthiness also can play a factor, but it could be tha it was a pretty weak metric.
 
-  ### Final Model
+### Final Model
 
   For our final model, we passed in all the nutritional values (carbohydrates, protein, total fat, sugar, sodium) and healthiness into a Pipeline with a LinearRegression model. We then calculated the R^2 score and the RMSE.
 
@@ -282,5 +282,27 @@ For our baseline model, we simply passed in the values of sodium, sugar, and hea
 R^2 = 0.9854
 RMSE = 25.86
 
-We can see that our R^2 value is very high, and our RMSE is very low. This is a good sign that our model is very accurate. This is likely due to the fact that all the nutritional values, especially our macronutrients (carbs, protein, fats), are very important in determining the calorie count of a food.
+We can see that our R^2 value is very high, and our RMSE is very low. This is a good sign that our model is very accurate. This is likely due to the fact that all the nutritional values, especially our macronutrients (carbs, protein, fats), are very important in determining the calorie count of a food. Our R^2 value imporved by 0.96 when we added the new columns. This is a very good sign that our model is very accurate.
+
+### Fairness Analysis
+
+For our fairness analysis, we wanted to see if the model was as preciss to healthy foods as it was for unhealthy foods. We ran a permutation test to see if there was a difference in the precision of our model for healthy and unhealthy foods.
+
+* Null Hypothesis: Our model is fair. Its precision for healthy recipes and unhealthy are roughly the same, and any differences are due to random chance.
+* Alternative Hypothesis: Our model is unfair. Its precision for healthy recipes  is higher than its precision for unhealthy recipes.
+
+* Test Statistic: Difference in precision between healthy and unhealthy foods.
+
+* p-value: 0.14
+
+<iframe
+  src="assets/8_fairness/fairness_analysis.html
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+We can see that our observed difference is not skewed in one direction. This is further confirmed by the p-value of 0.14, which is greater than 0.05.
+
+* Conclusion: We fail to reject the null hypothesis since 0.14 > 0.05. Therefore, our model is likely fair.
 
