@@ -194,7 +194,7 @@ The values of minutes vary greatly, so we will plot the denisity of the filtered
 We can see the density does not vary that gretaly, however, let us runa  permutation test to be sure.
 
 <iframe
-  src="assets/missingness/perm_min.html
+  src="assets/missingness/perm_min.html"
   width="800"
   height="600"
   frameborder="0"
