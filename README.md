@@ -158,4 +158,80 @@ We decided to plot the mean, max, and min of calories against minutes. We can se
 
 ### NMAR
 
-* 'desciption' is NMAR because contributers are likely to not offer a description if it is simple and self explanatory. For example, a recipe for a PB and J sandwich might not need a description due to its simplicity, popularity, and self explanatory. Therefore, they might choose to not include it. 
+* 'desciption' is NMAR because contributers are likely to not offer a description if it is simple and self explanatory. For example, a recipe for a PB and J sandwich might not need a description due to its simplicity, popularity, and self explanatory. Therefore, they might choose to not include it.
+
+### Missingness Dependancy
+
+We wanted to examine the missingess of the rating column and check if it has any dependancies. So we ran a permutation test with against minutes and calories.
+
+#### Against Minutes:
+
+* Null Hypothesis: The missingness of ratings does not depend on the amount of minutes it takes to make a recipe.
+
+* Alternative Hypothesis: The missingness of ratings does depend on the amount of minutes it takes to make a recipe.
+
+* Test Statistic: Difference in mean ratings between missing and non-missing ratings.
+
+* p-value: 0.112
+
+
+<iframe
+  src="assets/missingness/density_min_raw.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The values of minutes vary greatly, so we will plot the denisity of the filtered values.
+
+<iframe
+  src="assets/missingess/calories_pivot_min.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+We can see the density does not vary that gretaly, however, let us runa  permutation test to be sure.
+
+<iframe
+  src="assets/missingess/perm_min.html
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+From this permutation test, we can see that the observed difference is not really skewed in one direction. Taking a look at the p-value, we can see that it is 0.112, which is greater than 0.05. 
+
+* Conclusion: We fail to reject the null hypothesis since 0.112 > 0.05. Therefore, the missingness of ratings does not depend on the amount of minutes it takes to make a recipe.
+
+
+#### Against Calories:
+
+* Null Hypothesis: The missingness of ratings does not depend on the amount of calories in a recipe.
+
+* Alternative Hypothesis: The missingness of ratings does depend on the amount of calories in a recipe.
+
+* Test Statistic: Difference in mean ratings between missing and non-missing ratings.
+
+* p-value: 0.000
+
+<iframe
+  src="assets/missingness/cal_miss.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+<iframe
+  src="assets/missingness/perm_cal.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+From this permutation test, we can see that the observed difference is skewed in one direction. Taking a look at the p-value, we can see that it is 0.000, which is less than 0.05.
+
+* Conclusion: We reject the null hypothesis since 0.000 < 0.05. Therefore, the missingness of ratings does depend on the amount of calories in a recipe.
+
+## Hypothesis Testing
