@@ -9,7 +9,7 @@ By: Fahad Alkhazam
 
 One of leading causes of illness and death is obesity and malnutrition. One of the main reasons for obesity is a caloric surplus. Essentially, what happens is that the body consumes more calories than it burns. This can happen due to several reasons, however, the dopamine release certain food,especially sugar, release can be addictive, causing some to overconsume foods high in calories. This begs the question: *what makes a food 'unhealthy' and is it coorelated with calories*
 
-In this project, I will be looking into two datasets containing the nutritional value of recipes of food, and another which has the ratings of those foods. Each recipe in both datasets holds a unique id, which will be useful when merging them. 
+In this project, we will be looking into two datasets containing the nutritional value of recipes of food, and another which has the ratings of those foods. Each recipe in both datasets holds a unique id, which will be useful when merging them. 
 
 Below are the columns of both datsets:
 
@@ -57,9 +57,9 @@ Let's plot a histogram of calories' counts:
   frameborder="0"
 ></iframe>
 
-We can see that the majority lie in the 0-5000 calorie mark. However, some data is lying in the upper 40k range, which might have a negative impact on our analyses. Therefore, I set the limit to 2000 calories as this is the limit of what most reasonable recipes have in calories. I simply filtered out values with calories greater than 2000. A reason for why they might have large amounts of calories is that they might not be for one person, or the person posting could have either made a mistake or trolling. This can be seen especially in the 'minutes' column, where a contributer posted a recipe that would take millions of minutes.
+We can see that the majority lie in the 0-5000 calorie mark. However, some data is lying in the upper 40k range, which might have a negative impact on our analyses. Therefore, we set the limit to 2000 calories as this is the limit of what most reasonable recipes have in calories. we simply filtered out values with calories greater than 2000. A reason for why they might have large amounts of calories is that they might not be for one person, or the person posting could have either made a mistake or trolling. This can be seen especially in the 'minutes' column, where a contributer posted a recipe that would take millions of minutes.
 
-Therefore, I filtered out based on these 5 points:
+Therefore, we filtered out based on these 5 points:
 * calories < 2000
 * carb PVD <100
 * protein PVD <100
@@ -296,7 +296,7 @@ For our fairness analysis, we wanted to see if the model was as preciss to healt
 * p-value: 0.14
 
 <iframe
-  src="assets/8_fairness/fairness_analysis.html
+  src="assets/8_fairness/fairness_analysis.html"
   width="800"
   height="600"
   frameborder="0"
@@ -306,3 +306,6 @@ We can see that our observed difference is not skewed in one direction. This is 
 
 * Conclusion: We fail to reject the null hypothesis since 0.14 > 0.05. Therefore, our model is likely fair.
 
+### Conclusion
+
+This was a fun analysis of the nutritional value of recipes and how they relate to healthiness and calories. We found that healthier foods tend to have less calories than unhealthy foods. We also found that we could predict the calorie count of a food based on its nutritional content with a high degree of accuracy. The type of nutrition we factor also is very important with macronutrients being more important than sodium for example. Finally, we found that our model was likely fair in its predictions. If we were to improve this analyis, we would find a better metric over the word 'healthy' as it is very arbitrary. Though that would be tough since assuming something is healthier because it has less calories could be seen as a bias. Overall, this was a fun analysis and  hope you enjoyed reading it! 
